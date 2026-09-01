@@ -1,0 +1,77 @@
+In a Node.js server, especially when using Express.js, a middleware is a function that runs between receiving a request and sending the response.
+
+Middleware is a function that gets access to the request and response objects and can perform some operation before either passing control to the next handler with next() or ending the request itself.
+
+
+Client
+  ↓
+HTTP Request
+  ↓
+Middleware -->function that runs on each request or response and can do some processing or operations
+  ↓
+Route Handler (function)
+  ↓
+Response
+  ↓
+Client
+
+one code can have multiple middlewares with different functionalities
+
+middleware is a kind of plugin
+
+middleware functions can perform the following tasks : 
+1. execute any code
+2. make changes to the request and response objects
+3. end the request-response cycle.
+4. call the next middleware function in the stack.
+
+
+
+// app.use() → registers a middleware in our Express server.
+// This middleware will run whenever a request comes to the server.
+app.use(
+    express.urlencoded({ extended: false })
+    // express.urlencoded() → built-in Express middleware used to parse
+    // URL-encoded data sent by HTML forms.
+    //
+    // For example, an HTML form might send:
+    // name=Yash&age=19
+    //
+    // Express will parse this data and store it inside:
+    // req.body
+    //
+    // So after parsing, we can access:
+    // req.body.name → "Yash"
+    // req.body.age  → "19"
+    //
+    // { extended: false } → tells Express to use the simpler parser.
+    // It is suitable for simple key-value form data.
+    //
+    // IMPORTANT:
+    // This middleware is mainly used for data sent with:
+    // Content-Type: application/x-www-form-urlencoded
+);
+
+// Example:
+//
+// If the client sends:
+//
+// name=Yash&age=19
+//
+// Then inside our route:
+//
+// app.post("/users", (req, res) => {
+//     console.log(req.body);
+// });
+//
+// req.body will contain:
+//
+// {
+//     name: "Yash",
+//     age: "19"
+// }
+//
+// So, in simple words:
+//
+// express.urlencoded() = "Take form data from the request,
+// parse it, and put the parsed data inside req.body."

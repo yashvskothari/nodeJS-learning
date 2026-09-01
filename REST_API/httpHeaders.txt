@@ -1,0 +1,15 @@
+addition information about the data packet that needs to be transferred
+it is metadata
+
+
+example =>
+from : ip of client
+to : ip of server
+content type : json
+
+
+so an httpHeader is a field of an HTTP request or response that passes additional context and metadata about the request or response. 
+
+
+
+we can add our own custom headers

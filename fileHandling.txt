@@ -1,0 +1,7 @@
+const fs = require("fs");
+
+fs is a core module , used to handle files
+
+
+files can be created , can be read , write and append, copy , access , unlink(delete), check stat
+all these operations are done synchronously as well as asynchronously

@@ -1,0 +1,22 @@
+REST- Representational State Transfer - or Restfull API
+it have some rules/best practices that we must follow :
+
+
+1. client sends req to server and server returns the res ---> REST API works on client-server architecture , where both are different machines and must be independent of each other
+(client can be a react application , a browser , a device , etc)
+
+(Note : a response can be in any format - text , image , html doc , json , etc) --> 
+html format - SSR - this is called Server Side rendering - its very fast and secure - client is dependent on the server - good in case where it is known that the client is a brower/web application
+
+json format - client will handle the data and formatting by itself - Client side rendering (CSR) - res.json() will become a json based server
+
+
+2. always respect all http methods  - GET , POST , PUT , PATCH , DELETE
+GET /user - read the user data and return data
+POST /user - handle new creation
+PATCH /user - update the user
+
+
+let say - we created POST /update user method - to update user ---> this is wrong practice
+
+

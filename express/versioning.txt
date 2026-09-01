@@ -1,0 +1,29 @@
+"version": "1.0.0" - means version of my own app
+
+
+"dependencies": {
+    "express": "^5.2.1"
+  } ---> version of express framework
+
+1st part : 5 - major/breaking update - might break the exsisting code of a project if this part changes - never changes this in existing projects/code , but can be used in new projects or code
+2nd part : 2 - recommended bug fix (security fix) - important
+3rd part : 1 - means minor fixes(optional updates)
+
+
+---- Symbols and their meanings : 
+
+a. "^"
+
+^5.2.1 ----> "^" ----> means dont change the bit for "major update"but can change the 2nd and 3rd bits for minor updates automatically whenever "npm install" is run
+(means lock the major release)
+^5.2.1 means version will be >= (5.2.1) and <(6.0.0)
+
+b. "~"
+ex : "~5.2.1" : means lock the recommended and major fixes , but can update the minor fixes automatically
+
+c. 
+if we dont use "^" or "~" means 5.2.1 is whole locked , and wont change at all 
+
+
+
+we can install a particular version as well  - npm install express@5.2.0

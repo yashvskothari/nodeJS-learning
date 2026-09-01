@@ -1,0 +1,23 @@
+-node is an opensource crossplatform runtime env for js that is used to run js code outside any browser (each browser have a js engine ex. v8 , spider monkey , etc)
+
+
+-ryan dahl embedded the v8 engine of chrome with cpp and created node
+-therefore , js can talk to native machine because of cpp
+-we can create webservers in js language
+
+- npm - node package manager
+"npm init" is used before starting any project : a package.json will be created that will be the configuration file that have dependencies for the project
+
+- "node <filename>" to run a js file in terminal
+
+-console.log(window) - error - window is not defined 
+but on the browser , when we console.log(window), we get a window object
+alert('hey') -error on node , but runs on browser
+this is beacuse all the dom and window related elements are not a part of node
+
+
+-in the package.json file we have "script" object , which we can define 
+ex. "scripts"{
+  "hello" : "hi there"
+}
+and now we can run it in terminal : "npm run hello"

@@ -1,0 +1,11 @@
+
+
+http methods - get, post, put, patch, delete
+
+get - request to retrieve data from the server --> server reads the data from dB and returns to the client
+post - to send some data in server (ex : filling or sending a form) ---> creating new data in the dB.
+
+( most of the time we use get or post)
+put - to update the whole document in the dB
+patch - to apply partial updates
+delete - to 

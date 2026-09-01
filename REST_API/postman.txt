@@ -1,0 +1,2 @@
+its a utility tool that helps in api testing and documentation
+time taken for response , status code , size , etc

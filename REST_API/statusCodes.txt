@@ -1,0 +1,30 @@
+ex : 404 - means not found
+
+http response status codes indicate whether a specific HTTP request has been successfully completed.
+responses are grouped in five classes :
+
+http response status codes :
+
+
+1. informational responses - 100 to 199
+
+
+2. successful responses - 200 to 299 - 200 OK means successful response , 201 created means successfully created new entry/user(it happens for post or some put requests) , 202 accepted , 203 non-authoritative information, 204 no content
+
+
+3. redirection messages - 300 to 399
+
+
+4. client error responses - 400 to 499
+400 bad request - server cannot or willnot process the request due to something that is perceived to be a client error
+401 unauthorized
+402 payment required
+403 forbidden - client does not have access rights to the content. It is unauthorized, so the server is refusing to give the requested resource. Unlike 401 , clients identity is known to the server
+404 not found - the server cannot find the requested resource. In the browser , this means , the url is not recognized. In an API , this can also mean that an endpoint is valid , but the resource itself does not exists.
+
+
+5. server error responses - 500 to 599
+500 Internal server error - server has encountered a situation , it does not know how to handle
+501 not implemented
+502 Bad Gateway
+503 Service Unavailable

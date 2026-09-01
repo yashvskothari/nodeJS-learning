@@ -1,0 +1,16 @@
+express is a js framework - it will manage (or provide) the handler function for the server
+
+- npm install express
+
+
+const express = require("express");
+const app = express(); // app initialized - this is a handler function
+
+
+to add the port , we can directly use : app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+
+we dont need to use http.createServer..... function 
+
+
+// basic routing : 
+// app.METHOD(PATH, HANDLER)

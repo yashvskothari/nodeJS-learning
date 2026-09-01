@@ -1,0 +1,32 @@
+whenever , creating a server , firstly npm init -y
+
+// index.js is the entry point
+
+we use http module to build an http server
+
+
+"http.createServer()" will create a server
+// now we must have a handler function , that processes the incoming requests
+// the createServer() function takes a REQUEST LISTENER call back function that can be used as the handler function
+// the REQUEST LISTENER takes two arguments - req and res 
+
+// we need a port to run the server
+we can use "myServer.listen(8000, () => console.log("server running on port 8000"))
+
+// we will go to package.json , and in scripts , we will add : 
+"start" : "node index"
+as soon as i do "npm start" my server will be started
+also , i can run the server using "node index" in the terminal
+
+
+
+we can go to the browser and and type : "localhost:<PORT Number>"
+
+if you make any changes in the server code , you need to restart the server to see the changes.
+Else you should use the module - nodemon
+
+for now , we are just sending text on the server , we can also send images , html , etc
+
+we will also use url module to identify the path of the request made by the user
+
+we also used fs module to create a log file of the requests made at a particular time and the url which was requested

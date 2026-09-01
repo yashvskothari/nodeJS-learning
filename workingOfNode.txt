@@ -1,0 +1,20 @@
+client - makes a request to our node js server
+event queue - all the requests go in this queue one by one 
+after the event queue , thes requests goes to the evene loop (that always watches the queue requests)
+
+event loops pick the requests from the queue in FIFO manner.
+requests can be of two types - blocking operations(synchronus) and non blocking operations(asynchronous)
+
+if the request is a non blocking operation , then event loop will process it and gives response to user
+
+if blocking operation , then it will go to the thread pool (thread - worker). 
+if any thread is available , then it will be assigned to the operation , and after finishing the work , it will return the result , and will be back to thread pool. then the result will be sent to user.
+if no thread is available , then the operation have to wait for the completion of any previous blocking operation to be completed..
+
+so its not a good practice to write big codes in blocking(synchronus) manner.
+
+readFileSync is synchronous — it blocks the event loop until the file is read, then returns the result directly.  It has no callback parameter.
+
+Default thread pool size = 4
+max ? - depends on the server we are buying 
+more threads - more cost

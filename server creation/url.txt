@@ -1,0 +1,28 @@
+url : uniform resource locator
+
+how to parse a url and what are its components
+
+it looks something like this : https://portfolio-yashvardhan-kothari.vercel.app/
+
+1. protocol : http or https : hypertext transer protocol(secure) - used for communicating with the server 
+
+https - is secure , have ssl certificate , and encryption
+ws - web sockets - this protocol is used for real time communications
+tcp , upd , ftp , smtp , dns , are some examples of protocols
+
+2. domain : ex: portfolio-yashvardhan-kothari.vercel.app
+ex : www.whatsapp.com
+A domain is user friendly name of Ip address of the server , as ip address can't be remembered
+
+we can get the ip address of any website on cmd : ex : ping google.com
+
+
+3. path : the slash (/) at the end is the path
+ex: / - home page or root page
+ex /about-us : about page
+ we can also have nested path as well
+
+ 4. query parameters - extra information , that we can pass with the url : comes after the "?" in the url
+
+ // we can not have spaces in url
+ // we use the url module for handling urls - its not a build in module

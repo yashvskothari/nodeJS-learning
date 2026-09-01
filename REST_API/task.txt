@@ -1,0 +1,98 @@
+Designing a REST API - To store Json data , 
+
+routes - 
+GET /users- reder an HTML doc
+GET /api/users- List all users in json format
+
+GET /api/users/1 - Get the user with ID = 1
+GET /api/users/2- Get the user with ID = 2
+
+these 1, 2,3,4,... are dynamic path parameters - a ":" colon is used before it 
+GET /api/user/:id
+
+
+POST /api/users - Create new user
+
+Patch /api/user/1 - Edit the user with ID 1
+
+DELETE /api/user/1 - Delete the user with ID 1
+
+(get the demo data from mockaroo.com)
+
+
+----------------------------------------------------------------------------------------------
+
+app.get("/users", (req, res) => {
+  const html = `
+  <ul>
+  ${users.map((user) => `<li>${user.first_name}</li>`)}
+  </ul>`;
+  res.send(html);
+});
+
+
+
+
+// routes API points - for json format
+
+
+
+app.get("/api/users", (req, res) => {
+  return res.json(users);
+}); // getting all users
+
+app.post("/api/users", (req, res) => {
+  // TODO - create new user
+  return res.json({ status: "pending" });
+});
+
+
+
+
+// getting users by their ids
+app.get("/api/users/:id", (req, res) => {
+  // first we need to get the id
+  const id = Number(req.params.id);
+  // req.params.id is a string , so we need to first convert it into number
+  // finding the appropriate user whose id matches with the requested id
+  const user = users.find((user) => user.id === id);
+  return res.json(user);
+});
+
+
+
+
+
+app.patch("/api/users/:id", (req, res) => {
+  //TODO : edit the user with given id
+  return res.json({ status: "pending" });
+}); // we use id for patch , and no need of id for put
+
+
+
+app.delete("/api/users/:id", (req, res) => {
+  //TODO : deleting a user with given id
+  return res.json({ status: "pending" });
+});
+
+// this is a hybrid server - a good practice where json as well as html response can be returned
+
+------------------------------------------------------------------------------------------------------------------
+
+
+we can see that in the above snippet , get , patch and delete methods are using same route : /api/users/id
+so we can write these in one single snippet as well
+
+app
+  .route("/api/users/:id")
+  .get((req, res) => {
+    const id = Number(req.params.id);
+    const user = users.find((user) => user.id === id);
+    return res.json(user);
+  })
+  .patch((req, res) => {
+    return res.json({ status: "pending" });
+  })
+  .delete((req, res) => {
+    return res.json({ status: "pendinig" });
+  });

@@ -1,0 +1,4 @@
+mongoDB - no-sql document based mongoDB
+stong support for aggregation pipes
+works on BSON format
+Best for node applications

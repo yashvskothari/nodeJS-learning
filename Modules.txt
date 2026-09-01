@@ -1,0 +1,32 @@
+-used to divide the code into small and manageable parts
+
+
+- // we can now export this module and import/requrire the module or its methods into other fils
+ex - "module.exports = {add};" exports the add function
+
+
+// import used for importing a particular part of the module
+// require is used for importing the whole module at once
+// multiple data/functions can be imported at once
+// multiple data/functions must be exported at once
+ex . module.exports = {add, sub, mul}. If separately exported , then overwriting
+
+// we can also directly export any fucntion :
+exports.mul = (a, b) => a *b 
+// an arrow function that returns a*b
+
+
+for importing : 
+const math = require('./math');
+// we can even destructure it --> const {add, sub} = require.('./math') and then we dont need to use math.add or math.sub , instead , we could directly use math or sub
+
+we can either do "multiple exports" or directly export
+
+modules can be core/built-in or custom
+
+in modern js , dont use require , but use import
+ex. import {add} from "./math.js"
+// but we must have "type" : "moddule" in package.json
+
+import - asynchronous statement - more preferable
+require - synchronous statement
