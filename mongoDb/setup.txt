@@ -1,4 +1,37 @@
 mongoDB - no-sql document based mongoDB
 stong support for aggregation pipes
-works on BSON format
+works on BSON(Binary JSON) format
 Best for node applications
+It does not force any schema(its not strict)
+
+
+in mongoDB , we have collections in the dB to store the data &
+inside collections , we can have multiple documents
+
+
+installation and setup
+1. install mongoDB - search on browser --> install mongoDB community edition
+2. install on system
+
+
+
+----> mongoD : engine of the mongoDB that runs in your system
+----> mongoDB compass : GUI for connecting with mongoD
+----> mongosh : command line shell for connecting with mongoD
+
+By default , mongoDB runs on port 27017  ---> local host : mongodb://localhost:27017
+
+In mongoDb mongoDB compass -->  "add new connection" ---> enter the url ---> click save and connect
+
+
+
+on the right side of the connection name , click "+" to create a new mongoDB
+
+
+
+Note : url --->  database(s) ---> collection(s) ---> document(s) - data is collected in JSON format
+
+
+we can use mongoDb compass to insert the data in dB
+
+in mongoDB - to uniquely identify any document , "_id" is automatically assigned

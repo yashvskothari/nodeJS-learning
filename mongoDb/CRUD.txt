@@ -1,0 +1,6 @@
+C-Create - Creating a new item in a Db
+R-Read - Fetching the created item
+U-Update 
+D-Delete
+
+CRUD - These are the requests that can be used to manipulate the data
