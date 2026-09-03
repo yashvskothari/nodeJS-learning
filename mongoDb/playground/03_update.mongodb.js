@@ -21,4 +21,7 @@ db.products.updateOne(
 );
 //"new" is added in the "tags" array
 
+
+
+
 db.products.find();

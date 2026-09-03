@@ -61,9 +61,9 @@ db.orders.insertMany([
 db.contacts.insertMany([{
   "name": "Alice", "message":"Loved your website!", "phone":23456789, "createdAt":new Date()},
   {
-  "name": "Bob", "message":"Amazing!", "phone":23156789, "createdAt":new Date()},
+  "name": "Bobi", "message":"Amazing!", "phone":231567789, "createdAt":new Date()},
   {
-  "name": "Carol", "message":"Loved your services!", "phone":23456749, "createdAt":new Date()}
+  "name": "Caroli", "message":"Loved your services!", "phone":234565749, "createdAt":new Date()}
 ])
 
 // db.dropDatabase(); it will delete the db
