@@ -1,0 +1,20 @@
+using mongoDB shell : 
+by default , "test" db runs
+
+
+to create or use new database : "use <dB_name>"
+
+"show db" will show all the availabe databases
+"show collections" will show all the availabe connections in a DB
+
+"db.<collection_name>.insertOne({})" will insert a new object with a new "_id"
+"db.<collection_name>.insertOne({"name": "Chitransh", "score":80})" will insert a new object with the added details
+
+"db.["<collection_name"].find()" will print the whole collection with all documents
+
+
+db."<collection_name">.insertMany([{"name":"pawan", "score":96}, {"name":"deepak", "score":87}])---> we need to use square brackets to add objects in form of array.
+
+similary we have updateOne , updateMany , deleteOne , deleteMany , etc
+
+

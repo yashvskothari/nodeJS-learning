@@ -4,3 +4,8 @@ U-Update
 D-Delete
 
 CRUD - These are the requests that can be used to manipulate the data
+
+
+creating - insertOne , insertMany
+read - db.<collection_name>.find() can be used along with filters
+update - updateone , updatemany

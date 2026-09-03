@@ -1,0 +1,7 @@
+we can use vscode to perform operations on db directly in vscode , instead of shell
+
+we must have mongodb extenstion installed and we can then connect with the connection string(provided by atlas) or by local url as well
+
+ex. name of the file : 01_setup.mongodb.js
+
+we can directly add the objects in the code in object format(json)by writing setup script in vscode and it will be updated on the compass(db)
