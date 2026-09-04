@@ -1,0 +1,8 @@
+used in production level to store the data
+
+its data is not stored in local storage of your computer like that in localhost
+
+we use different services like amazon aws , or DigitalOcean or mongoDb atlas - they store the data securly , and provide a connection string
+
+
+

@@ -1,0 +1,63 @@
+use("ecommerce");
+
+// db.sales.insertMany([
+//   {
+//     _id: 1,
+//     item: "Apple",
+//     price: 10,
+//     quantity: 5,
+//     category: "Fruit",
+//   },
+//   {
+//     _id: 2,
+//     item: "Banana",
+//     price: 5,
+//     quantity: 10,
+//     category: "Fruit",
+//   },
+//   {
+//     _id: 3,
+//     item: "Carrot",
+//     price: 8,
+//     quantity: 6,
+//     category: "Vegetable",
+//   },
+//   {
+//     _id: 4,
+//     item: "Tomato",
+//     price: 6,
+//     quantity: 8,
+//     category: "Vegetable",
+//   },
+//   {
+//     _id: 5,
+//     item: "Mango",
+//     price: 15,
+//     quantity: 3,
+//     category: "Fruit",
+//   },
+// ]);
+
+// db.sales.aggregate([
+//   { $match: { category: "Fruit" } },
+//   {
+//     $project: { _id: 0, item: 1, price: 1 },
+//   },
+// ]);
+
+// id wont be shown , as it is set to 0
+// item and price will be shown as they are set to 1(true)
+
+// if we wanna find the total sales of a particular category
+
+db.sales.aggregate([
+  {
+    $group: {
+      _id: "$category",
+      totalSales: {
+        $sum: { $multiply: ["$price", "$quantity"] },
+      },
+    },
+  },
+  { $sort: { totalSales: -1 } },
+]);

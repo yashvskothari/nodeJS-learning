@@ -1,0 +1,22 @@
+aggregation pipelines in mongoDB are used to analyze and tranfrom data.They work in stages , each stage performs an operation, and the output of one stage becomes the input of the next.
+
+db.<collection_name>.aggregate([
+  { / * stage 1 * /}
+  { / * stage 2 * /}
+  { / * stage 3 * /}
+  .
+  .
+  .
+  .
+]);
+
+mongoDB supports over 25 stages of aggregation
+
+
+$match - works like "find"
+
+$project : display particular fields
+
+$group : group and calculate totals
+
+$match , $project , $group, $add, $sort, $multiply...... are known as accumulators
